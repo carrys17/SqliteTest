@@ -49,7 +49,7 @@
        
 
 
-    //CursorAdapter是一个接口，不能直接new一个出来，所以要定义一个类去继承使用
+    //CursorAdapter是一个抽象类，不能直接new一个出来，所以要定义一个类去继承使用
     public class MyCursorAdapter extends CursorAdapter{
 
         public MyCursorAdapter(Context context, Cursor c, int flags) {
@@ -96,7 +96,7 @@
             Log.i("xyz",sql);
             db.execSQL(sql);
 
-}
+         }
         db.setTransactionSuccessful();
         db.endTransaction();
         
